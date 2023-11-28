@@ -72,6 +72,7 @@ void setup() {
   int a = EEPROM.read(0);
   int b = EEPROM.read(55);
   int c = EEPROM.read(255);
+  
   int chacksumm = a+b-c;
   
   if ((!flag_Clock)&&(!chacksumm==55)) // якщо флаг rtc ds1307 не піднятий включення піднято
@@ -80,7 +81,7 @@ void setup() {
 
     
          
-  delay(3000);
+  delay(4000);
  // пишемо в память lcd символи
   lcd.createChar(0, menuCursor);
   lcd.createChar(1, upArrow);
