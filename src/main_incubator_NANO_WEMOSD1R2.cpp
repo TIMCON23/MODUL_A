@@ -26,14 +26,12 @@ void setup() {
   Serial.println(F("INCUBATOR TIM&Co...Start module...."));
   delay(5000); // даємо ESP8266  зловити інтернет
   
-  
   // починаємо налагодження годинника реального часу
   
   // перевіряємочи чи є годинник на шині
-  bool checkDS1307Presence()
-   {
-  Wire.beginTransmission(DS1307_ADDRESS);
-  byte error = Wire.endTransmission();
+     bool checkDS1307Presence()
+        { Wire.beginTransmission(DS1307_ADDRESS);
+          byte error = Wire.endTransmission();
 
       if (error == 0)// DS1307 знайдено на шині I2C
         {  GET_DateTime();// читаємо свій rtc ds1307 годинник

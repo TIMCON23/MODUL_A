@@ -228,7 +228,7 @@ byte menuCursor[8] = { //стрілка напрямку вправо
 
 // назви функцій
 
-
+ bool checkDS1307Presence();
 void Get_data_time_ESP8266();//запит на точний час в ESP8266
 void print_Lcd_time();// lcd1602
 void GET_data_sensors ();// відправка параметрів в serial, esp8266, lcd1602
